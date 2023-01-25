@@ -1,28 +1,30 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getBooks } from "../../redux/features/books/booksSlice";
-import { HeaderContainer, Title, Input } from "./header.style.js";
+import { HeaderContainer, Section, Title, Input } from "./header.style.js";
 
 function Header() {
-  const [search, setSearch] = useState("");
+  const [term, setTerm] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     if (e) e.preventDefault();
-    dispatch(getBooks({ name: search }));
+    dispatch(getBooks({ name: term }));
   };
 
   return (
     <HeaderContainer>
-      <Title>Search Books App</Title>
-      <form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="Search a book"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </form>
+      <Section>
+        <Title>Search Books App</Title>
+        <form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="Search a book"
+            value={term}
+            onChange={(e) => setTerm(e.target.value)}
+          />
+        </form>
+      </Section>
     </HeaderContainer>
   );
 }

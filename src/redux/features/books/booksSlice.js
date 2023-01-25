@@ -3,14 +3,14 @@ import axios from "axios";
 
 const initialState = {
   books: [], // state
-  search: "",
+  term: "",
   length: 0,
 };
 
-export const getBooks = createAsyncThunk("getBooks", async (search) => {
-  if (!search.name) return [];
+export const getBooks = createAsyncThunk("getBooks", async (term) => {
+  if (!term.name) return [];
   const res = await axios.get(
-    `https://www.googleapis.com/books/v1/volumes?q=intitle:${search.name}&printType=books&orderBy=newest&maxResults=35`
+    `https://www.googleapis.com/books/v1/volumes?q=intitle:${term.name}&printType=books&orderBy=newest&maxResults=35`
   );
   return res.data.items;
 });
