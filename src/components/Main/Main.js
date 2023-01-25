@@ -2,39 +2,33 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function Main() {
-  const books = useSelector((state) => state.booksReducer.books);
+  const booksList = useSelector((state) => state.books.books);
 
   return (
-    <div className="m-auto w-11/12 mt-5 min-h-[55vh] grid grid-cols-3 gap-3">
-      {books && books.length > 0 ? (
-        books.map((book) => {
+    <div>
+      {booksList && booksList.length > 0 ? (
+        booksList.map((book) => {
           return (
             book.volumeInfo.imageLinks &&
             book.volumeInfo.authors && (
-              <div
-                className="w-80 m-5 text-center bg-slate-200 p-3 rounded text-black inline-block"
-                key={book.id}
-              >
-                <img
-                  className="w-11/12 h-52 ml-auto mr-auto object-contain pb-4"
-                  alt="ımagesLive"
-                  src={book.volumeInfo.imageLinks.smallThumbnail}
-                />
-                <h5 className="mt-4 text-base">{book.volumeInfo.title}</h5>
-                <h6 className="mt-0 mb-4 inline-block p-1 pt-6 text-base">
-                  {book.volumeInfo.authors[0]}
-                </h6>
-                <br />
-                <button className="inline-block hover:text-red-300 text-black">
-                  Preview
-                </button>
+              <div key={book.id} className="book-card">
+                <div className="book-image">
+                  <img
+                    src={book.volumeInfo.imageLinks.smallThumbnail}
+                    alt={book.volumeInfo.title}
+                  />
+                </div>
+                <div className="book-detail">
+                  <h3>{book.volumeInfo.title}</h3>
+                  <h4>{book.volumeInfo.authors[0]}</h4>
+                </div>
               </div>
             )
           );
         })
       ) : (
-        <div className="text-center text-4xl ml-[550px] flex justify-center">
-          <div>Find book</div>
+        <div>
+          <p>There is not any book you can see at the moment!</p>
         </div>
       )}
     </div>

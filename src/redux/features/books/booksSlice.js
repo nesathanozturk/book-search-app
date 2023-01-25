@@ -7,9 +7,10 @@ const initialState = {
   length: 0,
 };
 
-export const getBooks = createAsyncThunk("getBooks", async () => {
+export const getBooks = createAsyncThunk("getBooks", async (search) => {
+  if (!search.name) return [];
   const res = await axios.get(
-    "https://www.googleapis.com/books/v1/volumes?q=intitle:${search.name}&printType=books&orderBy=newest&maxResults=35"
+    `https://www.googleapis.com/books/v1/volumes?q=intitle:${search.name}&printType=books&orderBy=newest&maxResults=35`
   );
   return res.data.items;
 });
