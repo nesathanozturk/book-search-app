@@ -1,8 +1,9 @@
 import React from "react";
-import "./Main.css";
 
-function Main() {
-  return <div>Main</div>;
+function Main({ books }) {
+  const renderedBooks = books.map((book, index) => <div key={index}></div>);
+
+  return { renderedBooks };
 }
 
 export default Main;
