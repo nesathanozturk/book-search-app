@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { getBooks } from "../../redux/features/books/booksSlice";
-import "./Header.css";
+import { HeaderContainer, Title, Input } from "./header.style.js";
 
 function Header() {
   const [search, setSearch] = useState("");
@@ -14,19 +13,17 @@ function Header() {
   };
 
   return (
-    <header>
-      <div>
-        <h1>Search Books App</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search a book"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </form>
-      </div>
-    </header>
+    <HeaderContainer>
+      <Title>Search Books App</Title>
+      <form onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          placeholder="Search a book"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </form>
+    </HeaderContainer>
   );
 }
 

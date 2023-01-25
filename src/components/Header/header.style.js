@@ -1,4 +1,6 @@
-header {
+import styled from "styled-components";
+
+export const HeaderContainer = styled.header`
   width: 100%;
   height: 10rem;
   display: flex;
@@ -6,22 +8,23 @@ header {
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
+`;
 
-h1 {
+export const Title = styled.h1`
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
+`;
 
-input {
+export const Input = styled.input`
   background-color: gray;
   color: #fff;
-  padding: 8px;
+  margin-top: 0.7rem;
+  padding: 10px;
   border: none;
   border-radius: 10px;
-}
-
-input:focus {
-  outline: none;
-}
+  font-size: 1rem;
+  :focus {
+    outline: none;
+  }
+`;
