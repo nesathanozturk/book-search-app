@@ -18,7 +18,7 @@ export const ModalInner = styled.div`
   box-sizing: border-box;
   position: relative;
   padding: 1.5rem;
-  overflow: hidden;
+  overflow: auto;
   font-size: 0.5rem;
   border-radius: 30px;
 `;
