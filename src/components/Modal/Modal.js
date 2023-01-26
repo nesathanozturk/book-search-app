@@ -32,10 +32,7 @@ function Modal({ modal, book, onClose }) {
           <div>
             <BookName>{book.volumeInfo.title}</BookName>
             <BookAuthor>{book.volumeInfo.authors}</BookAuthor>
-            <BookTitle>
-              {book.volumeInfo.publisher}
-              <span>{book.volumeInfo.publishDate}</span>
-            </BookTitle>
+            <BookTitle>{book.volumeInfo.publisher}</BookTitle>
             <br />
             <a href={book.volumeInfo.previewLink}>
               <Preview>Preview</Preview>

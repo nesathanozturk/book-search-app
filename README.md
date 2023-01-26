@@ -2,6 +2,8 @@
 
 Google Books API veya herhangi başka bir API ile kullanıcıların kitap veya yazar ismi yazarak kitap arayabileceği bir servis geliştirmeniz gerekiyor.
 
+<img src="./src/assets/ptk-ss.png" />
+
 # Gereksinimler
 
 1. Input'a girilecek olan ifadeye uygun sonuçlar getirilmeli ve ekranda listelenmeli.

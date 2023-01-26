@@ -15,7 +15,7 @@ function Header() {
   return (
     <HeaderContainer>
       <Section>
-        <Title>Search Books App</Title>
+        <Title>Book Search App</Title>
         <form onSubmit={handleSubmit}>
           <Input
             type="text"

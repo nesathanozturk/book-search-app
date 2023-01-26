@@ -14,12 +14,12 @@ function Footer() {
           <Links href="https://www.github.com/nesathanozturk">Github</Links>
         </li>
         <li>
-          <Links href="mailto:nesathanozturk061@gmail.com">Email</Links>
-        </li>
-        <li>
           <Links href="https://www.instagram.com/nesathanozturk">
             Instagram
           </Links>
+        </li>
+        <li>
+          <Links href="mailto:nesathanozturk061@gmail.com">Email</Links>
         </li>
       </Ul>
       <Paragraph>Made with by ❤️&nbsp; Neşathan Öztürk</Paragraph>
