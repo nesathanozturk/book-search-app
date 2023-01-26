@@ -24,8 +24,9 @@ export const Title = styled.h1`
 export const Input = styled.input`
   background-color: gray;
   color: #fff;
+  width: 30%;
   margin-top: 0.7rem;
-  padding: 10px;
+  padding: 13px;
   border: none;
   border-radius: 10px;
   font-size: 1rem;
