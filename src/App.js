@@ -9,7 +9,6 @@ function App() {
     <div className="App animate__animated animate__fadeIn">
       <Header />
       <Main />
-      <Footer />
     </div>
   );
 }
