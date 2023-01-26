@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import {
   Container,
@@ -9,8 +9,12 @@ import {
   Author,
   WarningDescription,
 } from "./main.style";
+import Modal from "../Modal/Modal";
 
 function Main() {
+  const [show, setShow] = useState(false);
+  const [bookItem, setBookItem] = useState();
+
   const booksList = useSelector((state) => state.books.books);
 
   return (
@@ -32,7 +36,20 @@ function Main() {
                     <Title>{book.volumeInfo.title}</Title>
                     <Author>{book.volumeInfo.authors[0]}</Author>
                   </BookInfo>
+                  <p
+                    onClick={() => {
+                      setShow(true);
+                      setBookItem(book);
+                    }}
+                  >
+                    Details
+                  </p>
                 </Books>
+                <Modal
+                  show={show}
+                  book={bookItem}
+                  onClose={() => setShow(false)}
+                />
               </section>
             )
           );

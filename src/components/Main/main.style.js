@@ -4,7 +4,6 @@ export const Container = styled.div`
   min-height: 55vh;
   display: flex;
   flex-wrap: wrap;
-  -moz-box-pack: center;
   justify-content: center;
   margin: 20px auto auto;
   width: 98%;
@@ -12,6 +11,9 @@ export const Container = styled.div`
 `;
 
 export const Books = styled.div`
+  display: inline-block;
+  padding: 15px 10px;
+  margin: 20px;
   width: 280px;
   text-align: center;
   background-color: #2e3030;
@@ -19,10 +21,6 @@ export const Books = styled.div`
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.51);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.51);
-  display: inline-block;
-  padding: 15px 10px;
-  width: 300px;
-  margin: 20px;
   transition: transform 0.2s ease-in-out;
   :hover {
     transform: scale(1.1);
@@ -54,9 +52,9 @@ export const Title = styled.h3`
 `;
 
 export const Author = styled.h4`
+display: inline-block;
 margin-top: 0px;
 margin-bottom: 15px;
-display: inline-block;
 padding: 20px 5px 5px;
 font-size: 16px;
 opacity: 0.7;
@@ -64,7 +62,7 @@ opacity: 0.7;
 `;
 
 export const WarningDescription = styled.p`
+  margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 2rem;
 `;
