@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillCloseCircle } from "react-icons/ai";
 import {
   ModalContainer,
   ModalInner,
@@ -20,9 +21,14 @@ function Modal({ modal, book, onClose }) {
   return (
     <ModalContainer>
       <ModalInner>
-        <Close onClick={onClose}>X</Close>
+        <Close onClick={onClose}>
+          <AiFillCloseCircle />
+        </Close>
         <ModalBox>
-          <Image src={book.volumeInfo.imageLinks.smallThumbnail} alt="" />
+          <Image
+            src={book.volumeInfo.imageLinks.smallThumbnail}
+            alt={book.volumeInfo.title}
+          />
           <div>
             <BookName>{book.volumeInfo.title}</BookName>
             <BookAuthor>{book.volumeInfo.authors}</BookAuthor>

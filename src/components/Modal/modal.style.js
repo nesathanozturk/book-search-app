@@ -24,11 +24,11 @@ export const ModalInner = styled.div`
 `;
 
 export const Close = styled.button`
-  background: transparent;
+  color: #fff;
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 17px;
+  font-size: 1.3rem;
   outline: none;
   border: none;
 `;
