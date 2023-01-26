@@ -7,12 +7,13 @@ import {
   BookInfo,
   Title,
   Author,
+  Details,
   WarningDescription,
 } from "./main.style";
 import Modal from "../Modal/Modal";
 
 function Main() {
-  const [show, setShow] = useState(false);
+  const [modal, setModal] = useState(false);
   const [bookItem, setBookItem] = useState();
 
   const booksList = useSelector((state) => state.books.books);
@@ -25,30 +26,30 @@ function Main() {
             book.volumeInfo.imageLinks &&
             book.volumeInfo.authors && (
               <section>
-                <Books key={book.id} className="book-card">
-                  <div className="book-image">
+                <Books key={book.id}>
+                  <div>
                     <Image
                       src={book.volumeInfo.imageLinks.smallThumbnail}
                       alt={book.volumeInfo.title}
                     />
                   </div>
-                  <BookInfo className="book-detail">
+                  <BookInfo>
                     <Title>{book.volumeInfo.title}</Title>
                     <Author>{book.volumeInfo.authors[0]}</Author>
                   </BookInfo>
-                  <p
+                  <Details
                     onClick={() => {
-                      setShow(true);
+                      setModal(true);
                       setBookItem(book);
                     }}
                   >
                     Details
-                  </p>
+                  </Details>
                 </Books>
                 <Modal
-                  show={show}
+                  modal={modal}
                   book={bookItem}
-                  onClose={() => setShow(false)}
+                  onClose={() => setModal(false)}
                 />
               </section>
             )

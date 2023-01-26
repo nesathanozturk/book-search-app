@@ -1,22 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 98%;
   min-height: 55vh;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 20px auto auto;
-  width: 98%;
   text-align: center;
 `;
 
 export const Books = styled.div`
-  display: inline-block;
-  padding: 15px 10px;
-  margin: 20px;
-  width: 280px;
-  text-align: center;
   background-color: #2e3030;
+  width: 280px;
+  display: inline-block;
+  margin: 20px;
+  padding: 15px 10px;
   border-radius: 5px;
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.51);
@@ -31,10 +30,10 @@ export const Image = styled.img`
   width: 95%;
   height: 220px;
   margin-left: auto;
-  object-fit: contain;
   margin-right: auto;
   padding-bottom: 15px;
   border-bottom: 1px solid rgb(220, 220, 220);
+  object-fit: contain;
 `;
 
 export const BookInfo = styled.div`
@@ -43,7 +42,7 @@ export const BookInfo = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 0.6rem;
-  padding: 0.5rem 1rem 1rem;
+  padding: 0.1rem 1rem 1rem;
   font-size: 0.8rem;
 `;
 
@@ -54,11 +53,22 @@ export const Title = styled.h3`
 export const Author = styled.h4`
 display: inline-block;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 5px;
 padding: 20px 5px 5px;
-font-size: 16px;
+font-size: 1rem;
 opacity: 0.7;
 }
+`;
+
+export const Details = styled.button`
+  background: #dd3439;
+  color: white;
+  width: 100px;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 10px;
 `;
 
 export const WarningDescription = styled.p`

@@ -12,20 +12,17 @@ import {
   Description,
 } from "./modal.style.js";
 
-function Modal({ show, book, onClose }) {
-  if (!show) {
+function Modal({ modal, book, onClose }) {
+  if (!modal) {
     return null;
   }
-
-  let thumbnail =
-    book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail;
 
   return (
     <ModalContainer>
       <ModalInner>
         <Close onClick={onClose}>X</Close>
         <ModalBox>
-          <Image src={thumbnail} alt="" />
+          <Image src={book.volumeInfo.imageLinks.smallThumbnail} alt="" />
           <div>
             <BookName>{book.volumeInfo.title}</BookName>
             <BookAuthor>{book.volumeInfo.authors}</BookAuthor>
