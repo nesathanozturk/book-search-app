@@ -30,6 +30,9 @@ export const Input = styled.input`
   border: none;
   border-radius: 10px;
   font-size: 1rem;
+  -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 1);
+  box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 1);
   :focus {
     outline: none;
   }

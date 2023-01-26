@@ -40,7 +40,7 @@ function Main() {
       ) : (
         <div>
           <WarningDescription>
-            There is not any book you can see at the moment!
+            There is not anything you can see!
           </WarningDescription>
         </div>
       )}
